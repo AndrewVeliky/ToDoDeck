@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            background-image: url(../../Content/Images/background.jpg); /* Путь к фоновому изображению */
+            background-color: #c7b39b; /* Цвет фона */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">
+            <span class="hidden-xs">To Do Deck - don`t forget anything</span>
+            <div class="visible-xs">To Do</div>
+            <div class="visible-xs">Deck</div>
+            <div class="lbuttons">
+                @Html.ActionLink("Log Out", "Logout", "Account", null, new { @class = "btn btn-primary"})
+            </div>
+        </a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

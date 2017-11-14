@@ -1,0 +1,30 @@
+﻿@using ToDo.WebUI.Models
+@model TaskToDoListViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="buttons">
+    @Html.ActionLink("Новый таск", "Create", null, new { @class = "btn btn-primary" })
+</div>
+
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-success">@TempData["message"]</div>
+}
+
+@foreach (var t in @Model.TasksToDo)
+{
+    <div class="card">  
+            <div class="well">
+                <h4 class="w3-container">@t.Name</h4>
+                <h5><i class="fa fa-clock-o"></i> @t.DateTime</h5>
+                <h5><i class="fa fa-clock-o"></i> @t.DateTime</h5>
+                <h5>@t.Description</h5>
+                <a class="w3-button w3-green">Done?</a>
+            </div>
+    </div>
+}
+
+
+

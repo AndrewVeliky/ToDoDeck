@@ -1,0 +1,16 @@
+﻿.lbuttons {
+    float: right;
+}
+.card {
+    float: left;
+    min-width: 400px;
+    min-height: 400px;
+    margin: 30px;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.buttons {
+    float: none;
+    margin: 20px;
+}
